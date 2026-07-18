@@ -6,10 +6,13 @@ Backed by a REST API.
 
 ## Submission links
 
-- **Live app:** TODO (Vercel URL)
-- **API health:** TODO (`https://<api-host>/api/health`)
-- **Repo:** TODO (GitHub URL)
+- **Live app:** https://acowale-machine-test-seven.vercel.app/
+- **API health:** https://acowale-machine-test.onrender.com/api/health
+- **Repo:** https://github.com/vishalPatil7/acowale-machine-test
 - **Notes:** [DECISIONS.md](./DECISIONS.md) · [TEACH_US.md](./TEACH_US.md)
+
+The admin dashboard is at `/admin/login` — any credentials work, it's a prototype gate.
+The API is on Render's free tier, so the first request after idle takes ~30–50s to wake.
 
 ## What it does
 
