@@ -91,7 +91,9 @@ six tiny components, `useMemo` caching five-element arrays, lazy loading on an
 app that builds to one ~60 KB bundle, and a dead error-factory method. It
 checked each removal was safe before I approved it. The code got simpler and
 nothing got slower. Having the AI critique its own output turned out to be more
-useful than having it write more code.
+useful than having it write more code. This isn't me being anti-performance —
+the day real usage or a profiler points at a slow render or an oversized bundle,
+I'll put these back, and I'll have a number to justify each one.
 
 ### 9. Share one instance where you disagreed with AI and why.
 

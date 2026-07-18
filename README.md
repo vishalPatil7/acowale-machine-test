@@ -49,6 +49,7 @@ The *why* behind each choice is in [DECISIONS.md](./DECISIONS.md).
 6. Wired the frontend to the live API. Added debounced search and server-side pagination.
 7. Verified end to end in a headless browser: the full submit → dashboard round-trip, including the trend bar bumping after a new submission.
 8. Did a scope-review pass to strip premature optimisation, then wrote these docs.
+9. Deployed, then tested the live URLs rather than assuming they worked — which is how I caught that `/admin` 404'd on a direct hit or refresh, even though clicking through to it worked fine. Missing SPA rewrite; fixed and re-verified.
 
 ## Architecture
 
@@ -127,7 +128,8 @@ Every error uses the same envelope: `{ "error": { "message": "...", "details": [
 | Observability  | Partial  | Structured logs only; no tracing or metrics                          |
 
 Search is debounced (300 ms) and the feedback list is paginated server-side
-(8 per page). The frontend builds to a single small bundle.
+(8 per page). The frontend builds to a single small bundle. Anything beyond that
+waits until a measurement shows it's needed.
 
 ## Deployment
 
