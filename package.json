@@ -1,0 +1,17 @@
+{
+  "name": "acowale-crm",
+  "version": "1.0.0",
+  "description": "Acowale CRM machine test - feedback platform (frontend + backend)",
+  "private": true,
+  "scripts": {
+    "install:all": "npm --prefix backend install && npm --prefix frontend install",
+    "db:reset": "npm --prefix backend run db:reset",
+    "dev:api": "npm --prefix backend run dev",
+    "dev:web": "npm --prefix frontend run dev",
+    "test": "npm --prefix backend test",
+    "build": "npm --prefix frontend run build"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

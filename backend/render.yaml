@@ -1,0 +1,21 @@
+# Optional Render blueprint for the backend API (the DB lives on Supabase).
+# The backend is a plain Node/Express server, so any Node host works - this is
+# just one free option. Deploy: push to GitHub, then "New > Blueprint" in Render.
+services:
+  - type: web
+    name: acowale-api
+    runtime: node
+    plan: free
+    rootDir: backend
+    buildCommand: npm install
+    startCommand: npm start
+    healthCheckPath: /api/health
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PGSSL
+        value: "true" # Supabase requires SSL
+      - key: CORS_ORIGIN
+        sync: false # set to your deployed frontend URL
+      - key: DATABASE_URL
+        sync: false # paste your Supabase DIRECT connection string (port 5432)

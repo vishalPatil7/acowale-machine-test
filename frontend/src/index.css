@@ -1,0 +1,68 @@
+@import 'tailwindcss';
+
+/* Design tokens lifted from the Claude Design export. */
+@theme {
+  --font-sans: 'Space Grotesk', system-ui, sans-serif;
+
+  --color-bg: #101114;
+  --color-surface: #17181d;
+  --color-surface-2: #141519;
+  --color-line: rgba(255, 255, 255, 0.07);
+  --color-accent: #ff6b2c;
+  --color-accent-hover: #ff8b57;
+  --color-ink: #ebecf0;
+
+  /* Category palette (matches the design pills/bars). */
+  --color-cat-bug: #fb7185;
+  --color-cat-feature: #60a5fa;
+  --color-cat-complaint: #fbbf24;
+  --color-cat-praise: #34d399;
+  --color-cat-other: #94a3b8;
+}
+
+html,
+body,
+#root {
+  min-height: 100vh;
+}
+
+body {
+  margin: 0;
+  background: var(--color-bg);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: var(--color-accent);
+  text-decoration: none;
+}
+a:hover {
+  color: var(--color-accent-hover);
+  text-decoration: underline;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: rgba(235, 236, 240, 0.32);
+}
+input:focus,
+textarea:focus {
+  outline: none;
+  border-color: rgba(255, 107, 44, 0.6) !important;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+.animate-fade-up {
+  animation: fadeUp 0.4s ease both;
+}
