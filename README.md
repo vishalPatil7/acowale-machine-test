@@ -20,6 +20,14 @@ The API is on Render's free tier, so the first request after idle takes ~30–50
 - **Admin dashboard** — totals, category distribution, a 14-day trend chart, recent submissions, and a searchable, filterable, paginated feedback list.
 - **REST API** — submit feedback, list feedback (paginated/filtered/searched), analytics summary, health check.
 
+![Admin dashboard](docs/overview.png)
+
+*Admin dashboard — totals, category distribution, 14-day trend.*
+
+| ![Public feedback form](docs/form.png) | ![Admin feedback list](docs/feedback.png) |
+| :---: | :---: |
+| *Public form — category, star rating, comment.* | *Feedback list — search, category filters, pagination.* |
+
 ## Stack
 
 | Layer    | Choice                                                |
